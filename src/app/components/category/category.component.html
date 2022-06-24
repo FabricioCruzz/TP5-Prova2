@@ -7,7 +7,10 @@
 </div>
 
 <form #form="ngForm" (submit)="saveData(form)">
-    <label>Nova categoria:</label>
-    <input type="text" name="newCat" [(ngModel)]="newCategory.name">
-    <input type="submit" value="Salvar">
+    <div>
+        <h3>Nova categoria:</h3>
+        <label>Nome:</label>
+        <input type="text" name="newCat" [(ngModel)]="newCategory.name">
+        <input type="submit" value="Salvar">
+    </div>
 </form>

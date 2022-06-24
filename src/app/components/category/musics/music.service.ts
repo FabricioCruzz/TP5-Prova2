@@ -13,7 +13,6 @@ export class MusicService {
   constructor(private http: HttpClient) { }
 
   getMusics(categoryID: number): Observable<Music[]>{
-    console.log('Here ' + categoryID)
     return this.http.get<Music[]>(this.urlAPI + `/${categoryID}`)
   }
 

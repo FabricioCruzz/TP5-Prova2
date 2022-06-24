@@ -1,5 +1,14 @@
 <h2>Categoria: {{ category.name }}</h2>
 
-<ul *ngFor="let music of musics">
-    <li>{{ music.filename }}</li>
+<ul *ngFor="let music of musics; let i = index">
+    <li>{{ music.musics[i].filename }}</li>
 </ul>
+
+<form #form="ngForm" (submit)="saveData(form)">
+    <div>
+        <h3>Nova música:</h3>
+        <label>Nome:</label>
+        <input type="text" name="newMusic" [(ngModel)]="newMusic">
+        <input type="submit" value="Salvar">
+    </div>
+</form>
